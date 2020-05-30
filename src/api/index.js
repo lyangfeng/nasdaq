@@ -6,3 +6,4 @@ import mockAjax from './mockAjax'
 export const cateLists = () => mockAjax.get("/cateLists") // 分类右侧内容数据
 export const reqIndex = () => mockAjax.get('/reqIndex') // 获取首页的数据
 export const reqcateNavDatas = () => mockAjax.get("/reqcateNavDatas") // 分类左侧导航数据
+export const reqIndexCateModule = () => mockAjax.get('/reqIndexCateModule') // 首页下拉列表数据

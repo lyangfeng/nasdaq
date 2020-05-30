@@ -2,7 +2,7 @@
   <van-search
     v-model="value"
     show-action
-    placeholder="请输入搜索关键词"
+    placeholder="搜索商品,共20008款好物"
     @search="onSearch"
     @cancel="onCancel"
   >
@@ -27,8 +27,8 @@ export default {
       Toast("登录");
     },
     onCancel() {
-      Toast('取消');
-    },
+      Toast("取消");
+    }
   }
 };
 </script>

@@ -2,12 +2,14 @@
 import {
   cateLists,
   reqIndex,
-  reqcateNavDatas
+  reqcateNavDatas,
+  reqIndexCateModule
 } from '@/api'
 const state = {
   cateLists: [], // 分类右侧内容数据
   reqIndex: [], // 首页的数据数组
-  reqcateNavDatas: [] // 分类左侧导航数据
+  reqcateNavDatas: [], // 分类左侧导航数据
+  reqIndexCateModule: [] // 主页nav对应模块数据
 }
 const mutations = {
   // 分类右侧内容数据
@@ -22,7 +24,10 @@ const mutations = {
   reqcateNavDatas(state, reqcateNavDatas) {
     state.reqcateNavDatas = reqcateNavDatas
   },
-
+  // 主页nav对应模块数据
+  reqIndexCateModule(state, reqIndexCateModule) {
+    state.reqIndexCateModule = reqIndexCateModule
+  }
 }
 const actions = {
    // 分类右侧内容数据
@@ -58,6 +63,17 @@ const actions = {
       commit('reqcateNavDatas', result.data)
     }
   },
+  // 主页nav对应模块数据
+  async reqIndexCateModule({
+    commit
+  }) {
+    // 调用接口发送异步请求
+    const result = await reqIndexCateModule()
+    if (result.code === 200) {
+      // 提交对应的mutations,并修改状态数据
+      commit('reqIndexCateModule', result.data)
+    }
+  }
 }
 const getters = {}
 export default {

@@ -31,7 +31,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch("reqcateNavDatas");
-    console.log(this.$store);
   }
 };
 </script>
