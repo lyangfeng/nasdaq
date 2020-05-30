@@ -11,7 +11,7 @@ import './mock/mockServer'
 // 引入swiper的样式文件
 import 'swiper/css/swiper.css'
 // 引入底部按钮
-import { Tabbar, TabbarItem } from 'vant';
+import { Tabbar, TabbarItem, Search, Button, Sidebar, SidebarItem } from 'vant';
 
 // 引入接口函数
 import * as API from './api'
@@ -25,6 +25,10 @@ Vue.config.productionTip = false
 // 注册使用按钮
 Vue.use(Tabbar)
 Vue.use(TabbarItem)
+Vue.use(Search)
+Vue.use(Button)
+Vue.use(Sidebar);
+Vue.use(SidebarItem)
 
 // 创建Vue实例,并挂载
 new Vue({

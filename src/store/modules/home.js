@@ -1,27 +1,61 @@
 // 引入api接口
 import {
-  index
+  cateLists,
+  reqIndex,
+  reqcateNavDatas
 } from '@/api'
 const state = {
-  index: [], // 首页的数据数组
+  cateLists: [], // 分类右侧内容数据
+  reqIndex: [], // 首页的数据数组
+  reqcateNavDatas: [] // 分类左侧导航数据
 }
 const mutations = {
-  // 首页的数据
-  index(state, index) {
-    state.index = index
+  // 分类右侧内容数据
+  cateLists(state, cateLists) {
+    state.cateLists = cateLists
+  },
+  // 首页的数据数组
+  reqIndex(state, reqIndex) {
+    state.reqIndex = reqIndex
+  },
+  // 分类左侧导航数据
+  reqcateNavDatas(state, reqcateNavDatas) {
+    state.reqcateNavDatas = reqcateNavDatas
   },
 
 }
 const actions = {
-  // 发送请求获取首页信息数据
-  async index({
+   // 分类右侧内容数据
+  async cateLists({
     commit
   }) {
     // 调用接口发送异步请求
-    const result = await index()
+    const result = await cateLists()
     if (result.code === 200) {
       // 提交对应的mutations,并修改状态数据
-      commit('index', result.data)
+      commit('cateLists', result.data)
+    }
+  },
+  // 发送请求获取首页信息数据
+  async reqIndex({
+    commit
+  }) {
+    // 调用接口发送异步请求
+    const result = await reqIndex()
+    if (result.code === 200) {
+      // 提交对应的mutations,并修改状态数据
+      commit('reqIndex', result.data)
+    }
+  },
+  // 分类左侧导航数据
+  async reqcateNavDatas({
+    commit
+  }) {
+    // 调用接口发送异步请求
+    const result = await reqcateNavDatas()
+    if (result.code === 200) {
+      // 提交对应的mutations,并修改状态数据
+      commit('reqcateNavDatas', result.data)
     }
   },
 }

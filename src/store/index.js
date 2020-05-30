@@ -25,10 +25,6 @@ export default new Vuex.Store({
   actions, // 总的actions
   getters, // 总的getters
   modules
-  // modules:{
-  //   home,
-  //   user
-  // }
 })
 
 // 当前该文件还在引入state,mutations,actions,getters,何用,作何解释?
