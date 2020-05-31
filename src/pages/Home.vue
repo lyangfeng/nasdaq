@@ -45,8 +45,8 @@ export default {
     })
   },
   mounted() {
-    this.$store.dispatch("reqIndexCateModule");
-    this.$store.dispatch("reqcateNavDatas");
+    this.$store.dispatch("reqIndexCateModule")
+    this.$store.dispatch("reqcateNavDatas")
   }
 };
 </script>
