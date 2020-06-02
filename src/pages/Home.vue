@@ -52,7 +52,7 @@
         class="warp-hot1"
         direction="horizontal"
         :column-num="2"
-        icon-size="90px"
+        icon-size="100px"
         :border="false"
       >
         <van-grid-item
@@ -64,7 +64,7 @@
       </van-grid>
     </div>
     <div>
-      <van-grid :border="false" class="warp-hot2">
+      <van-grid :border="false" class="warp-hot2" icon-size="45px">
         <van-grid-item
           v-for="(a2,index) in reqIndexcategoryHotSellModule2"
           :key="index"
@@ -88,60 +88,163 @@
         </van-count-down>
         <p class="p2">更多&gt;</p>
       </div>
-      <div class="cnt">
-        <div class="img-warp">
-          <img src="../../public/images/ia_100000035.webp" />
+      <div class="warp-cnt">
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000035.webp" />
+          </div>
+          <div>
+            <span class="price1">¥135</span>
+            <span class="price2">¥169</span>
+          </div>
         </div>
-        <div>
-          <span class="price1">¥135</span>
-          <span class="price2">¥169</span>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000036.webp" />
+          </div>
+          <div>
+            <span class="price1">¥299</span>
+            <span class="price2">¥399</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000037.webp" />
+          </div>
+          <div>
+            <span class="price1">¥119</span>
+            <span class="price2">¥169</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000038.webp" />
+          </div>
+          <div>
+            <span class="price1">¥179</span>
+            <span class="price2">¥219</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000039.webp" />
+          </div>
+          <div>
+            <span class="price1">¥69</span>
+            <span class="price2">¥89</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000040.webp" />
+          </div>
+          <div>
+            <span class="price1">¥119</span>
+            <span class="price2">¥229</span>
+          </div>
         </div>
       </div>
-      <div class="cnt">
-        <div class="img-warp">
-          <img src="../../public/images/ia_100000036.webp" />
+    </div>
+    <!-- 新品首发 -->
+    <div class="warp-limited">
+      <div class="limited">
+        <p class="p1">新品首发</p>
+        <p class="p2">更多&gt;</p>
+      </div>
+      <div class="warp-cnt">
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000041.webp" />
+          </div>
+          <div>
+            <span class="price3">¥52</span>
+            <span class="price4">6.1开门红</span>
+          </div>
         </div>
-        <div>
-          <span class="price1">¥299</span>
-          <span class="price2">¥399</span>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000042.webp" />
+          </div>
+          <div>
+            <span class="price3">¥1259</span>
+            <span class="price4">618预售</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000043.webp" />
+          </div>
+          <div>
+            <span class="price3">¥22</span>
+            <span class="price4">3件7.8折</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000587.webp" />
+          </div>
+          <div>
+            <span class="price3">¥299</span>
+            <span class="price4">618预售</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000588.webp" />
+          </div>
+          <div>
+            <span class="price3">¥199</span>
+          </div>
+        </div>
+        <div class="cnt">
+          <div class="img-warp">
+            <img src="../../public/images/ia_100000589.webp" />
+          </div>
+          <div>
+            <span class="price3">¥49.9</span>
+            <span class="price4">618预售</span>
+          </div>
         </div>
       </div>
-      <div class="cnt">
-        <div class="img-warp">
-          <img src="../../public/images/ia_100000037.webp" />
+    </div>
+    <!-- 底部两格数据 -->
+    <div class="warp-limited">
+      <div class="warp-bottom">
+        <div class="bottom">
+          <div>
+            <span class="price5">3件3折</span>
+            <span class="price6">同价618</span>
+          </div>
+          <div class="img-bottom">
+            <img src="../../public/images/ia_100000047.webp" />
+            <img src="../../public/images/ia_100000048.webp" />
+          </div>
         </div>
-        <div>
-          <span class="price1">¥119</span>
-          <span class="price2">¥169</span>
-        </div>
-      </div>
-      <div class="cnt">
-        <div class="img-warp">
-          <img src="../../public/images/ia_100000038.webp" />
-        </div>
-        <div>
-          <span class="price1">¥179</span>
-          <span class="price2">¥219</span>
-        </div>
-      </div>
-      <div class="cnt">
-        <div class="img-warp">
-          <img src="../../public/images/ia_100000039.webp" />
-        </div>
-        <div>
-          <span class="price1">¥69</span>
-          <span class="price2">¥89</span>
+        <div class="bottom">
+          <div>
+            <span class="price5">员工精选</span>
+            <span class="price6">内部都在抢</span>
+          </div>
+          <div class="img-bottom">
+            <img src="../../public/images/ia_100000049.webp" />
+            <img src="../../public/images/ia_100000050.webp" />
+          </div>
         </div>
       </div>
-       <div class="cnt">
-        <div class="img-warp">
-          <img src="../../public/images/ia_100000040.webp" />
-        </div>
-        <div>
-          <span class="price1">¥119</span>
-          <span class="price2">¥229</span>
-        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="warp-limiteds">
+      <div class="bottom-end">
+        <p class="bottom-end-1">下载APP</p>
+        <p class="bottom-end-2">电脑版</p>
       </div>
+      <span class="bottom-end-s1">网易公司版权所有 © 1997-</span>
+      <br />
+      <span class="bottom-end-s2">食品经营许可证：JY13301080111719</span>
+    </div>
+    <!-- 固定图标 -->
+    <div class="pin-icon">
+      <img src="../../public/images/ia_100000078.webp">
     </div>
   </div>
 </template>
@@ -191,6 +294,7 @@ export default {
 <style scoped>
 .warp {
   background-color: rgb(230, 230, 230);
+  position: relative;
 }
 .van-swipe .van-swipe-item {
   color: #fff;
@@ -320,31 +424,148 @@ export default {
   background-color: #333;
   border-radius: 5px;
 }
+/* 限时购下方图片 */
 .warp-limited {
   margin-top: -5px;
   background-color: #fff;
 }
-.limited {
+.warp-limited .limited {
+  position: relative;
 }
-.limited .p1 {
-  top: 10px;
-  left: 10px;
+.warp-limited .limited .p1 {
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-bottom: 5px;
 }
-.limited .time {
-  top: 25px;
+.warp-limited .limited .time {
+  position: absolute;
+  top: 15px;
   left: 70px;
 }
-.limited .p2 {
-  right: 10px;
-  top: 10px;
+.warp-limited .limited .p2 {
+  right: 15px;
+  top: 0px;
+  position: absolute;
 }
-.price1 {
+.warp-limited .price1 {
   color: #dd1a21;
   font-size: 15px;
+  margin-left: 20px;
 }
-.price2 {
+.warp-limited .price2 {
   color: #7f7f7f;
   text-decoration: line-through;
   font-size: 13px;
+  margin-left: 10px;
+}
+.warp-limited .warp-cnt {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.warp-limited .warp-cnt .cnt .img-warp {
+  background-color: #f5f5f5;
+  width: 110px;
+  height: 110px;
+  margin-left: 10px;
+}
+.warp-limited .warp-cnt .cnt .img-warp img {
+  width: 110px;
+  height: 110px;
+}
+/* 新品首发 */
+.warp-limited .warp-cnt .cnt .price3 {
+  display: block;
+  color: #dd1a21;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.warp-limited .warp-cnt .cnt .price4 {
+  border: 1px solid #dd1a21;
+  border-radius: 50px;
+  font-size: 11px;
+  margin-left: 20px;
+  color: #dd1a21;
+}
+/* 底部两格数据 */
+.warp-limited .warp-bottom {
+  margin-top: 15px;
+  display: flex;
+}
+.warp-limited .warp-bottom .bottom {
+  background-color: #f5f5f5;
+  width: 45%;
+  height: 150px;
+  margin-top: 15px;
+  margin-left: 13px;
+  margin-bottom: 15px;
+}
+.warp-limited .warp-bottom .bottom .price5 {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: rgb(51, 51, 51);
+  font-size: 18px;
+}
+.warp-limited .warp-bottom .bottom .price6 {
+  color: rgb(127, 127, 127);
+  margin-left: 10px;
+  font-size: 13px;
+}
+.warp-limited .warp-bottom .bottom .img-bottom img {
+  width: 80px;
+  height: 80px;
+}
+/* 底部 */
+.warp-limiteds {
+  background: rgb(46, 43, 43);
+  height: 150px;
+  position: relative;
+}
+.warp-limiteds .bottom-end {
+  display: flex;
+  margin: 10px;
+}
+.warp-limiteds .bottom-end .bottom-end-1 {
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+.warp-limiteds .bottom-end .bottom-end-2 {
+  color: #fff;
+  font-size: 13px;
+  padding: 8px;
+  border: 1px solid #fff;
+  position: absolute;
+  right: 100px;
+  top: 20px;
+}
+.warp-limiteds .bottom-end-s1 {
+  color: #999;
+  position: absolute;
+  bottom: 50px;
+  left: 120px;
+  font-size: 12px;
+}
+.warp-limiteds .bottom-end-s2 {
+  color: #999;
+  position: absolute;
+  bottom: 35px;
+  left: 90px;
+  font-size: 12px;
+}
+.pin-icon{
+  position: fixed;
+  z-index: 4;
+  bottom: 100px;
+  right: 0;
+}
+.pin-icon img{
+  width: 60px;
+  height: 40px;
 }
 </style>
