@@ -9,3 +9,4 @@ export const reqIndex = () => mockAjax.get('/reqIndex') // 获取首页的数据
 export const reqcateNavDatas = () => mockAjax.get("/reqcateNavDatas") // 分类左侧导航数据
 export const reqIndexCateModule = () => mockAjax.get('/reqIndexCateModule') // 首页下拉列表数据
 export const reqBuying = () => ajax.get('/topic/v1/know/navWap.json') // 值得买数据
+export const reqBuyingEnd = () =>ajax.get('/topic/v1/find/recAuto.json') //值得买下的懒加载数据

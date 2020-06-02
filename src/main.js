@@ -25,7 +25,8 @@ import {
   Tabs,
   Grid,
   GridItem,
-  Icon
+  Icon,
+  Image as VanImage
 } from 'vant';
 
 // 引入接口函数
@@ -52,6 +53,7 @@ Vue.use(Tabs)
 Vue.use(Grid)
 Vue.use(GridItem)
 Vue.use(Icon)
+Vue.use(VanImage)
 
 // 创建Vue实例,并挂载
 new Vue({
