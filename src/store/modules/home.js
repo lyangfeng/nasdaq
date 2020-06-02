@@ -80,8 +80,6 @@ const actions = {
     // 调用接口发送异步请求
     const result = await reqIndex()
     if (result.code == 200) {
-      console.log(result);
-
       // 提交对应的mutations,并修改状态数据
       commit('reqIndex', result.data)
     }
@@ -92,8 +90,6 @@ const actions = {
     // 调用接口发送异步请求
     const result = await reqIndex()
     if (result.code == 200) {
-      console.log(result);
-
       // 提交对应的mutations,并修改状态数据
       commit('reqIndex2', result.data)
     }
@@ -104,8 +100,6 @@ const actions = {
     // 调用接口发送异步请求
     const result = await reqIndex()
     if (result.code == 200) {
-      console.log(result);
-
       // 提交对应的mutations,并修改状态数据
       commit('reqIndex3', result.data)
     }
@@ -149,7 +143,6 @@ const actions = {
   }) {
     // 调用接口发送异步请求
     const result = await reqBuyingEnd()
-    console.log(result);
     if (result.code == 200) {
       // 提交对应的mutations,并修改状态数据
       commit('reqBuyingEnd', result.data)

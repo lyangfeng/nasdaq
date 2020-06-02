@@ -26,7 +26,8 @@ import {
   Grid,
   GridItem,
   Icon,
-  Image as VanImage
+  Image as VanImage,
+  CountDown
 } from 'vant';
 
 // 引入接口函数
@@ -54,6 +55,7 @@ Vue.use(Grid)
 Vue.use(GridItem)
 Vue.use(Icon)
 Vue.use(VanImage)
+Vue.use(CountDown)
 
 // 创建Vue实例,并挂载
 new Vue({

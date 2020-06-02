@@ -11,11 +11,12 @@
     <van-grid direction="horizontal" :column-num="3" :border="false" icon-size="15">
       <van-grid-item v-for="(c2,index) in reqIndex" :key="index" :icon="c2.icon" :text="c2.desc" />
     </van-grid>
-    <van-grid :column-num="5" :border="false" icon-size="55">
+    <van-grid :column-num="5" :border="false" icon-size="52">
       <van-grid-item
-        v-for="(c3,index) in reqIndexcategoryHotSellModule"
+        v-for="(c3,index) in reqIndexkingKongModule"
         :key="index"
         :icon="c3.picUrl"
+        :text="c3.text"
       />
     </van-grid>
     <div class="three-img">
@@ -47,7 +48,13 @@
     </div>
     <!-- 类目热销榜 -->
     <div>
-      <van-grid class="warp-hot">
+      <van-grid
+        class="warp-hot1"
+        direction="horizontal"
+        :column-num="2"
+        icon-size="90px"
+        :border="false"
+      >
         <van-grid-item
           v-for="(a1,index) in reqIndexcategoryHotSellModule1"
           :key="index"
@@ -57,7 +64,7 @@
       </van-grid>
     </div>
     <div>
-      <van-grid>
+      <van-grid :border="false" class="warp-hot2">
         <van-grid-item
           v-for="(a2,index) in reqIndexcategoryHotSellModule2"
           :key="index"
@@ -65,6 +72,76 @@
           :text="a2.categoryName"
         />
       </van-grid>
+    </div>
+    <!-- 限时购 -->
+    <div class="warp-limited">
+      <div class="limited">
+        <p class="p1">限时购</p>
+        <van-count-down :time="time" class="time">
+          <template v-slot="timeData">
+            <span class="block">{{ timeData.hours }}</span>
+            <span class="colon">:</span>
+            <span class="block">{{ timeData.minutes }}</span>
+            <span class="colon">:</span>
+            <span class="block">{{ timeData.seconds }}</span>
+          </template>
+        </van-count-down>
+        <p class="p2">更多&gt;</p>
+      </div>
+      <div class="cnt">
+        <div class="img-warp">
+          <img src="../../public/images/ia_100000035.webp" />
+        </div>
+        <div>
+          <span class="price1">¥135</span>
+          <span class="price2">¥169</span>
+        </div>
+      </div>
+      <div class="cnt">
+        <div class="img-warp">
+          <img src="../../public/images/ia_100000036.webp" />
+        </div>
+        <div>
+          <span class="price1">¥299</span>
+          <span class="price2">¥399</span>
+        </div>
+      </div>
+      <div class="cnt">
+        <div class="img-warp">
+          <img src="../../public/images/ia_100000037.webp" />
+        </div>
+        <div>
+          <span class="price1">¥119</span>
+          <span class="price2">¥169</span>
+        </div>
+      </div>
+      <div class="cnt">
+        <div class="img-warp">
+          <img src="../../public/images/ia_100000038.webp" />
+        </div>
+        <div>
+          <span class="price1">¥179</span>
+          <span class="price2">¥219</span>
+        </div>
+      </div>
+      <div class="cnt">
+        <div class="img-warp">
+          <img src="../../public/images/ia_100000039.webp" />
+        </div>
+        <div>
+          <span class="price1">¥69</span>
+          <span class="price2">¥89</span>
+        </div>
+      </div>
+       <div class="cnt">
+        <div class="img-warp">
+          <img src="../../public/images/ia_100000040.webp" />
+        </div>
+        <div>
+          <span class="price1">¥119</span>
+          <span class="price2">¥229</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -75,6 +152,7 @@ export default {
   name: "Home",
   data() {
     return {
+      time: 30 * 60 * 60 * 1000,
       active: 0,
       images: [
         "https://yanxuan.nosdn.127.net/b6ccdb8d18db1e601a5e0814b12c7099.jpg?type=webp&imageView&quality=75&thumbnail=750x0",
@@ -96,8 +174,8 @@ export default {
     ...mapState({
       reqIndexCateModule: state => state.home.reqIndexCateModule,
       reqIndex: state => state.home.reqIndex.policyDescList,
-      reqIndexcategoryHotSellModule: state =>
-        state.home.reqIndex.categoryHotSellModule.categoryList
+      reqIndexkingKongModule: state =>
+        state.home.reqIndex.kingKongModule.kingKongList
     })
   },
   mounted() {
@@ -105,7 +183,6 @@ export default {
     this.$store.dispatch("reqIndex");
     this.$store.dispatch("reqIndex2");
     this.$store.dispatch("reqIndex3");
-    console.log(this.$store);
   }
 };
 </script>
@@ -139,6 +216,7 @@ export default {
 .three-img-o2 {
   margin: 10px 8px;
 }
+/* 新人专享礼样式 */
 .warp-new {
   margin-top: 10px;
   background-color: white;
@@ -223,7 +301,50 @@ export default {
   right: 5px;
   top: 140px;
 }
-.warp-hot {
+/* 热销榜样式 */
+.warp-hot1 {
   margin-top: 10px;
+}
+/* 倒计时样式 */
+.colon {
+  display: inline-block;
+  margin: 0 4px;
+  color: #333;
+}
+.block {
+  display: inline-block;
+  width: 22px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #333;
+  border-radius: 5px;
+}
+.warp-limited {
+  margin-top: -5px;
+  background-color: #fff;
+}
+.limited {
+}
+.limited .p1 {
+  top: 10px;
+  left: 10px;
+}
+.limited .time {
+  top: 25px;
+  left: 70px;
+}
+.limited .p2 {
+  right: 10px;
+  top: 10px;
+}
+.price1 {
+  color: #dd1a21;
+  font-size: 15px;
+}
+.price2 {
+  color: #7f7f7f;
+  text-decoration: line-through;
+  font-size: 13px;
 }
 </style>
