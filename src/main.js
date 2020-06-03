@@ -7,6 +7,7 @@ import router from './router'
 // 引入vuex的store
 import store from './store'
 // 引入mock
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import './mock/mockServer'
 // 引入swiper的样式文件
 import 'swiper/css/swiper.css'
@@ -27,9 +28,12 @@ import {
   GridItem,
   Icon,
   Image as VanImage,
-  CountDown
+  CountDown,
+  Form,
+  Field
 } from 'vant';
 
+import 'swiper/css/swiper.css'
 // 引入接口函数
 import * as API from './api'
 
@@ -56,6 +60,9 @@ Vue.use(GridItem)
 Vue.use(Icon)
 Vue.use(VanImage)
 Vue.use(CountDown)
+Vue.use(Form)
+Vue.use(Field)
+Vue.use(VueAwesomeSwiper)
 
 // 创建Vue实例,并挂载
 new Vue({

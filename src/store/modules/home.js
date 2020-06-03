@@ -10,6 +10,9 @@ import {
 const state = {
   cateLists: [], // 分类右侧内容数据
   reqIndex: {
+    kingKongModule:{
+      kingKongList: []
+    },
     categoryHotSellModule: {
       categoryList: []
     }
@@ -26,7 +29,9 @@ const state = {
   },
   reqcateNavDatas: [], // 分类左侧导航数据
   reqIndexCateModule: [], // 主页nav对应模块数据
-  reqBuying: {}, // 值得买数据
+  reqBuying: {
+    navList: [],
+  }, // 值得买数据
   reqBuyingEnd: {} //值得买懒加载数据
 }
 const mutations = {
@@ -69,6 +74,7 @@ const actions = {
     // 调用接口发送异步请求
     const result = await cateLists()
     if (result.code === 200) {
+      JSON.stringify(result.data)
       // 提交对应的mutations,并修改状态数据
       commit('cateLists', result.data)
     }
@@ -163,6 +169,10 @@ const getters = {
   reqIndexcategoryHotSellModule2(state) {
     const reqIndexcategoryHotSellModule2 = state.reqIndex3.categoryHotSellModule.categoryList.splice(2, 10)
     return reqIndexcategoryHotSellModule2
+  },
+  categoryList(state) {
+    const categoryList = state.reqindex.categoryHotSellModule.categoryList;
+    return categoryList ? categoryList : {};
   },
 }
 export default {

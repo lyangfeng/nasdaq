@@ -8,41 +8,62 @@
       <van-icon name="cart-o" size="25" class="wap-cart" />
     </div>
     <div class="warp-img">
-      <img src="https://m.you.163.com/topic/index/img/topic_logo.c2284970.png" class="img-logo" />
+      <img
+        src="https://m.you.163.com/topic/index/img/topic_logo.c2284970.png"
+        class="img-logo"
+      />
       <div class="img-text1">严选好物</div>
       <div class="img-text2">用心生活</div>
-      <img class="img-bg" src="https://m.you.163.com/topic/index/img/topic_title_bg.2373a140.png" />
+      <img
+        class="img-bg"
+        src="https://m.you.163.com/topic/index/img/topic_title_bg.2373a140.png"
+      />
     </div>
-    <!-- <div class="warp-small-img"> -->
-    <van-tabs v-model="active">
-      <van-tab v-for="index in 4" :key="index">
-        <van-image v-for="(c1,index) in Buying " :key="index" :src="c1.picUrl" class="small-img" />
-      </van-tab>
-    </van-tabs>
-
-    <!-- <div v-for ="{b1,index} in reqBuyingEnd" :key="index">{{b1.look.nickname}}</div> -->
-
-    <!-- </div> -->
+    <swiper class="swiper" :options="swiperOption">
+      <swiper-slide v-for="(c1, index) in Buying" :key="index">
+        <div>
+          <img :src="c1.picUrl" alt />
+          <img :src="c1.picUrl" alt />
+        </div>
+      </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
   </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import { mapGetters, mapState } from "vuex";
 export default {
   name: "Buying",
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data() {
     return {
-      active: 0
+      active: 0,
+      swiperOption: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      },
     };
   },
   computed: {
     ...mapGetters(["Buying"]),
-    ...mapState({ reqBuyingEnd: state => state.home.reqBuyingEnd.result })
+    ...mapState({ reqBuyingEnd: (state) => state.home.reqBuyingEnd.result }),
+    swiper() {
+      return this.$refs.mySwiper.$swiper;
+    },
   },
   mounted() {
     this.$store.dispatch("ReqBuying");
     this.$store.dispatch("reqBuyingEnd");
-  }
+  },
 };
 </script>
 
@@ -106,19 +127,29 @@ export default {
   left: 160px;
   font-size: 16px;
 }
-/* .warp-small-img {
-  display: flex;
-  width: 90%;
-  background-color: red;
-  position: absolute;
-  top: 110px;
-  left: 18px;
-  border-radius: 10px;
-} */
 .warp-small-img {
   display: flex;
 }
-.small-img {
+/* .small-img {
   justify-content: space-around;
+} */
+/* 轮播图 */
+.swiper {
+  background: url("https://m.you.163.com/topic/index/img/topic_title_bg.2373a140.png");
 }
+.box1 {
+  width: 62.24px;
+  height: 62.24px;
+}
+.swiper-container {
+  width: 100%;
+  height: 200px;
+}
+img {
+  width: 62.24px;
+  height: 62.24px;
+}
+</style>
+<style lang="scss" scoped>
+@import "./base.scss";
 </style>
