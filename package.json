@@ -21,7 +21,7 @@
     "qrcode": "^1.4.4",
     "sass": "^1.26.7",
     "sass-loader": "^8.0.2",
-    "swiper": "^5.4.1",
+    "swiper": "^6.5.1",
     "uuidjs": "^4.2.5",
     "vant": "^2.8.4",
     "vee-validate": "^2.2.13",
